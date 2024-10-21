@@ -59,17 +59,17 @@ class CorrectnessClassifier(
     examples = [
         (
             QuestionAnswerGroundTruth(
-                question="What powers the sun and what is its primary function?",
+                question="太陽には何があり、その主な機能は何なのか？",
                 answer=[
-                    "The sun is powered by nuclear fission, similar to nuclear reactors on Earth.",
-                    "The primary function of the sun is to provide light to the solar system.",
+                    "太陽は、地球の原子炉と同じように核分裂によって動いている。",
+                    "太陽の主な役割は、太陽系に光を供給することである。",
                 ],
                 ground_truth=[
-                    "The sun is powered by nuclear fusion, where hydrogen atoms fuse to form helium.",
-                    "This fusion process in the sun's core releases a tremendous amount of energy.",
-                    "The energy from the sun provides heat and light, which are essential for life on Earth.",
-                    "The sun's light plays a critical role in Earth's climate system.",
-                    "Sunlight helps to drive the weather and ocean currents.",
+                    "太陽は核融合によって動いており、水素原子が融合してヘリウムを形成する。",
+                    "この核融合プロセスは、太陽のコアで莫大なエネルギーを放出する。",
+                    "太陽からのエネルギーは、地球上の生命にとって不可欠な熱と光を供給する。",
+                    "太陽の光は地球の気候システムにおいて重要な役割を果たしている。",
+                    "太陽の光は天候や海流を動かすのに役立っている。",
                 ],
             ),
             ClassificationWithReason(
