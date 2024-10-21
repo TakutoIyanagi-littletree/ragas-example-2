@@ -1,0 +1,65 @@
+[project]
+name = "ragas"
+dependencies = [
+    "numpy",
+    "datasets",
+    "tiktoken",
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    "langchain_openai",
+    "nest-asyncio",
+    "appdirs",
+    "pydantic>=2",
+    "openai>1",
+    "pysbd>=0.3.4",
+]
+dynamic = ["version", "readme"]
+
+[project.optional-dependencies]
+all = [
+    "sentence-transformers",
+    "transformers",
+    "nltk",
+    "rouge_score",
+    "rapidfuzz",
+    "pandas",
+    "datacompy",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material",
+    "mkdocs-jupyter",
+    "mkdocstrings[python]",
+    "mkdocs-glightbox",
+    "mkdocs-autorefs",
+    "mkdocs-gen-files",
+    "mkdocs-literate-nav",
+    "mkdocs-section-index",
+    "mkdocs-git-committers-plugin-2",
+    "mkdocs-git-revision-date-localized-plugin",
+]
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/plain"}
+
+[tool.ruff]
+exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+ignore = ["E501"]
+
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/ragas/_version.py"
+
+[tool.pytest.ini_options]
+addopts = "-n 0"
+asyncio_default_fixture_loop_scope = "function"
+[pytest]
+testpaths = ["tests"]
