@@ -75,63 +75,63 @@ class CorrectnessClassifier(
             ClassificationWithReason(
                 TP=[
                     StatementsWithReason(
-                        statement="The primary function of the sun is to provide light to the solar system.",
-                        reason="This statement is somewhat supported by the ground truth mentioning the sun providing light and its roles, though it focuses more broadly on the sun's energy.",
+                        statement="太陽の主な役割は、太陽系に光を供給することである。",
+                        reason="この声明は、より広く太陽のエネルギーに焦点を当てているが、光を提供する太陽とその役割に言及した基本的な真実によっていくらか裏付けられている。",
                     )
                 ],
                 FP=[
                     StatementsWithReason(
-                        statement="The sun is powered by nuclear fission, similar to nuclear reactors on Earth.",
-                        reason="This statement is incorrect and contradicts the ground truth which states that the sun is powered by nuclear fusion.",
+                        statement="太陽は、地球の原子炉と同じように核分裂によって動いている。",
+                        reason="この発言は間違っており、太陽が核融合によって動いているという基本的な真実と矛盾している。",
                     )
                 ],
                 FN=[
                     StatementsWithReason(
-                        statement="The sun is powered by nuclear fusion, where hydrogen atoms fuse to form helium.",
-                        reason="This accurate description of the sun’s power source is not included in the answer.",
+                        statement="太陽は核融合によって動いており、水素原子が融合してヘリウムを形成する。",
+                        reason="太陽の動力源に関するこの正確な記述は、答えには含まれていない。",
                     ),
                     StatementsWithReason(
-                        statement="This fusion process in the sun's core releases a tremendous amount of energy.",
-                        reason="This process and its significance are not mentioned in the answer.",
+                        statement="この核融合プロセスは、太陽のコアで莫大なエネルギーを放出する。",
+                        reason="このプロセスとその意義については、答案には書かれていない。",
                     ),
                     StatementsWithReason(
-                        statement="The energy from the sun provides heat and light, which are essential for life on Earth.",
-                        reason="The answer only mentions light, omitting the essential aspects of heat and its necessity for life, which the ground truth covers.",
+                        statement="太陽からのエネルギーは、地球上の生命にとって不可欠な熱と光を供給する。",
+                        reason="答えは光にしか触れておらず、熱の本質的な側面や生命維持に必要なことは省かれている。",
                     ),
                     StatementsWithReason(
-                        statement="The sun's light plays a critical role in Earth's climate system.",
-                        reason="This broader impact of the sun’s light on Earth's climate system is not addressed in the answer.",
+                        statement="太陽の光は地球の気候システムにおいて重要な役割を果たしている。",
+                        reason="太陽の光が地球の気候システムに与えるこのような幅広い影響については、回答では触れられていない。",
                     ),
                     StatementsWithReason(
-                        statement="Sunlight helps to drive the weather and ocean currents.",
-                        reason="The effect of sunlight on weather patterns and ocean currents is omitted in the answer.",
+                        statement="太陽の光は天候や海流を動かすのに役立っている。",
+                        reason="太陽光が気象パターンや海流に及ぼす影響については、答えの中に省略されている。",
                     ),
                 ],
             ),
         ),
         (
             QuestionAnswerGroundTruth(
-                question="What is the boiling point of water?",
+                question="水の沸点は何度ですか？",
                 answer=[
-                    "The boiling point of water is 100 degrees Celsius at sea level"
+                    "水の沸点は海面で摂氏100度です。"
                 ],
                 ground_truth=[
-                    "The boiling point of water is 100 degrees Celsius (212 degrees Fahrenheit) at sea level.",
-                    "The boiling point of water can change with altitude.",
+                    "水の沸点は海面温度で摂氏100度（華氏212度）です。",
+                    "水の沸点は標高によって変化する。",
                 ],
             ),
             ClassificationWithReason(
                 TP=[
                     StatementsWithReason(
-                        statement="The boiling point of water is 100 degrees Celsius at sea level",
-                        reason="This statement is directly supported by the ground truth which specifies the boiling point of water as 100 degrees Celsius at sea level.",
+                        statement="水の沸点は海面で摂氏100度です。",
+                        reason="この発言は、水の沸点が海抜で摂氏100度であるという根拠によって直接的に裏付けられている。",
                     )
                 ],
                 FP=[],
                 FN=[
                     StatementsWithReason(
-                        statement="The boiling point of water can change with altitude.",
-                        reason="This additional information about how the boiling point of water can vary with altitude is not mentioned in the answer.",
+                        statement="水の沸点は標高によって変化する。",
+                        reason="水の沸点が高度によってどのように変化するかについてのこの追加情報は、答えには書かれていない。",
                     )
                 ],
             ),
