@@ -53,10 +53,10 @@ class PydanticPrompt(BasePrompt, t.Generic[InputModel, OutputModel]):
                 input_data, output_data = e
                 example_strings.append(
                     self.instruction
-                    + "\n"
+                    + "\n\n"
                     + "input: "
                     + input_data.model_dump_json(indent=4)
-                    + "\n"
+                    + "\n\n"
                     + "output: "
                     + output_data.model_dump_json(indent=4)
                 )
