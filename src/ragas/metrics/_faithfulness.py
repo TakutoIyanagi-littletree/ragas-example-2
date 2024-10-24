@@ -98,7 +98,7 @@ example_output_1 = SentencesSimplified(
 
 
 class LongFormAnswerPrompt(PydanticPrompt[FaithfulnessStatements, SentencesSimplified]):
-    instruction = "Given a question, an answer, and sentences from the answer analyze the complexity of each sentence given under 'sentences' and break down each sentence into one or more fully understandable statements while also ensuring no pronouns are used in each statement. Format the outputs in JSON."
+    instruction = "\nGiven a question, an answer, and sentences from the answer analyze the complexity of each sentence given under 'sentences' and break down each sentence into one or more fully understandable statements while also ensuring no pronouns are used in each statement. Format the outputs in JSON."
     input_model = FaithfulnessStatements
     output_model = SentencesSimplified
     examples = [(example_input_1, example_output_1)]
