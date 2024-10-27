@@ -41,7 +41,7 @@ class PydanticPrompt(BasePrompt, t.Generic[InputModel, OutputModel]):
 
     def _generate_output_signature(self, indent: int = 4) -> str:
         return (
-            f"\nPlease return the output in a JSON format that complies with the "
+            f"Please return the output in a JSON format that complies with the "
             f"following schema as specified in JSON Schema and OpenAPI specification:\n"
             f"{self.output_model.model_json_schema()}"
         )
@@ -76,13 +76,13 @@ class PydanticPrompt(BasePrompt, t.Generic[InputModel, OutputModel]):
             + self._generate_output_signature()
             + "\n"
             + self._generate_examples()
-            + "\n\nNow perform the above instruction with the following input\n"
+            + "\nNow perform the above instruction with the following input\n"
             + (
                 "input: " + data.model_dump_json(indent=4) + "\n"
                 if data is not None
                 else "input: (None)\n"
             )
-            + "\noutput: "
+            + "output: "
         )
 
     async def generate(
