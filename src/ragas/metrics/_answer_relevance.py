@@ -40,19 +40,19 @@ class ResponseRelevancePrompt(
     examples = [
         (
             ResponseRelevanceInput(
-                response="""Albert Einstein was born in Germany.""",
+                response="""アルベルト・アインシュタインはドイツで生まれた。""",
             ),
             ResponseRelevanceOutput(
-                question="Where was Albert Einstein born?",
+                question="アルベルト・アインシュタインはどこで生まれたのか？",
                 noncommittal=0,
             ),
         ),
         (
             ResponseRelevanceInput(
-                response="""I don't know about the  groundbreaking feature of the smartphone invented in 2023 as am unaware of information beyond 2022. """,
+                response="""私は2022年以降の情報を知らないので、2023年に発明されたスマートフォンの画期的な機能については知らない。""",
             ),
             ResponseRelevanceOutput(
-                question="What was the groundbreaking feature of the smartphone invented in 2023?",
+                question="2023年に発明されたスマートフォンの画期的な機能とは？",
                 noncommittal=1,
             ),
         ),
